@@ -47,3 +47,9 @@ print(reversed_text)
 
 
 #commit test
+
+
+# income = int(input('Enter income'))
+# tax = float(input('Enter tax rate'))
+
+# total = 
