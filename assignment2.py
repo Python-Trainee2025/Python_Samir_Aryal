@@ -20,3 +20,12 @@ def fibonacci(n):
 num = int(input("Enter how many terms: "))
 for i in range(num):
     print(fibonacci(i), end=", ")
+
+
+# 2. Accept a word/sentence from the user and count how many vowels (a, e, i, o, u) are present in it.
+word = input('\n enter a word: ')
+count = 0
+for letter in word:
+    if letter.lower() in ['a','e','i','o','u']:
+        count+=1
+print(f'the number of vowels present in {word} is {count}')
