@@ -42,5 +42,4 @@ def count_words_in_file(filename):
     except FileNotFoundError as e:
         print(e)
 
-# Example usage
 count_words_in_file('text-file.txt')
