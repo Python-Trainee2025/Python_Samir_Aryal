@@ -29,3 +29,18 @@ for letter in word:
     if letter.lower() in ['a','e','i','o','u']:
         count+=1
 print(f'the number of vowels present in {word} is {count}')
+
+
+# 3. Read a text file and count the number of words in it. Handle the case where the file might not exist.
+def count_words_in_file(filename):
+    try:
+        with open(filename, 'r') as file:
+            text = file.read()
+            words = text.split()
+            word_count = len(words)
+            print(f"Total number of words: {word_count}")
+    except FileNotFoundError as e:
+        print(e)
+
+# Example usage
+count_words_in_file('text-file.txt')
