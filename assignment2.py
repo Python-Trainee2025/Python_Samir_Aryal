@@ -72,5 +72,24 @@ def calculator():
     except ValueError:
         print("Error: Invalid input. Please enter numeric values.")
 
-# Run the calculator
+
 calculator()
+
+
+# 5. Read a .csv file and print each row. Handle file not found and other parsing errors if needed
+
+import csv
+
+def read_csv_file(filename):
+    try:
+        with open(filename, mode='r', newline='', encoding='utf-8') as file:
+            reader = csv.reader(file)
+            for row in reader:
+                print(row)
+    except FileNotFoundError:
+        print(f"Error: The file '{filename}' was not found.")
+    except csv.Error as e:
+        print(f"Error reading CSV file: {e}")
+
+
+read_csv_file('data.csv')
