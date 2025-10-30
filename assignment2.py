@@ -42,5 +42,35 @@
 #     except FileNotFoundError as e:
 #         print(e)
 
-# Example usage
+
 count_words_in_file('text-file.txt')
+
+# 4. create a calculator that takes two numbers and an operator (+, -, *, /) and performs the operation. Handle division by zero and invalid input errors.
+def calculator():
+    try:
+        num1 = float(input("Enter the first number: "))
+        operator = input("Enter an operator (+, -, *, /): ")
+        num2 = float(input("Enter the second number: "))
+
+        if operator == '+':
+            result = num1 + num2
+        elif operator == '-':
+            result = num1 - num2
+        elif operator == '*':
+            result = num1 * num2
+        elif operator == '/':
+            if num2 == 0:
+                print("Error: Division by zero is not allowed.")
+                return
+            result = num1 / num2
+        else:
+            print("Error: Invalid operator. Please use +, -, *, or /.")
+            return
+
+        print(f"Result: {num1} {operator} {num2} = {result}")
+
+    except ValueError:
+        print("Error: Invalid input. Please enter numeric values.")
+
+# Run the calculator
+calculator()
